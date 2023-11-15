@@ -1,0 +1,64 @@
+<style>
+    .card {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+        color: #000;
+        font-size: 20px;
+    }
+
+    .list-group-item {
+        background-color: #90EE90;
+    }
+</style>
+
+<div class="container mt-5">
+    <p class="text-left " style="font-size: 25px; color: #131212; font-weight: 500;">Como Funcionam os Cupons no
+        Restaurante</p>
+    <hr>
+
+    <div class="row ">
+        <div class="col-md-4 ">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Introdução</h5>
+                    <p class="card-text" style="color: #131212;">
+                        Bem-vindo à nossa seção de cupons! Os cupons são uma ótima maneira de economizar em suas
+                        refeições favoritas em nosso restaurante.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Como Obter Cupons</h5>
+                    <p class="card-text" style="color: #131212;">
+                        Você pode obter nossos cupons de diversas maneiras:
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" ng-repeat="method in $ctrl.obtainMethods">{{ method }}</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Como Usar Cupons</h5>
+                    <p class="card-text" style="color: #131212;">
+                        Usar nossos cupons é fácil e rápido:
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item" ng-repeat="step in $ctrl.usageSteps">{{ step }}</li>
+                    </ol>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
