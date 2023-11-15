@@ -1,6 +1,6 @@
 # Gestor de Cupons
 
-![gestordecupons!](./assets/Screen_Recording_20231115-185337_Chrome (1).gif)
+![gestordecupons!](./assets/video.gif)
 
 Bem-vindo ao Gestor de Cupons, um aplicativo de gerenciamento de cupons desenvolvido com AngularJS. Este projeto permite que você acompanhe e gerencie cupons para seu restaurante. Você pode encontrar abaixo informações importantes sobre o projeto.
 
