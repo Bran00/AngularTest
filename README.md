@@ -1,5 +1,7 @@
 # Gestor de Cupons
 
+![gestordecupons!](./assets/Screen_Recording_20231115-185337_Chrome (1).gif)
+
 Bem-vindo ao Gestor de Cupons, um aplicativo de gerenciamento de cupons desenvolvido com AngularJS. Este projeto permite que você acompanhe e gerencie cupons para seu restaurante. Você pode encontrar abaixo informações importantes sobre o projeto.
 
 ## Tecnologias Utilizadas
@@ -23,7 +25,7 @@ A estrutura de arquivos do projeto é organizada da seguinte forma:
 
 Para executar o projeto localmente, siga estas etapas:
 
-1. Clone este repositório: `git clone [URL do repositório]`.
+1. Clone este repositório: `git clone https://github.com/Bran00/AngularTest.git`.
 2. Instale o Browsersync na sua máquina.
 3. Navague até a pasta raiz desse projeto.
 4. Rode no seu terminal o comando "$browser-sync start --server --files "**/*"".
