@@ -19,6 +19,7 @@ A estrutura de arquivos do projeto é organizada da seguinte forma:
 - `app.js`: Arquivo JavaScript principal que define o módulo Angular e suas dependências.
 - `controllers/`: Pasta contendo os controladores AngularJS.
 - `components/`: Pasta contendo os componentes AngularJS reutilizáveis.
+- `views/`: Pasta contendo os views HTML dos componentes.
 - `README.md`: Este arquivo com informações sobre o projeto.
 
 ## Como Executar
