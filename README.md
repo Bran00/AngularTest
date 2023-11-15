@@ -34,6 +34,5 @@ Para executar o projeto localmente, siga estas etapas:
 ## Licença
 
 Este projeto está sob a licença MIT.
----
 
 Esperamos que você aproveite o Gestor de Cupons! Se você tiver alguma dúvida ou problema, sinta-se à vontade para entrar em contato conosco.
