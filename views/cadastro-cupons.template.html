@@ -1,92 +1,88 @@
 <div class="container mt-5">
-    <p class="text-left" style="font-size: 25px; color: #131212; font-weight: 500;">Cadastro de Cupons</p>
-    <hr>
+  <p class="text-left" style="font-size: 25px; color: #131212; font-weight: 500;">Cadastro de Cupons</p>
+  <hr>
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="cupomNome"><strong>Nome do Cupom:</strong></label>
-                            <input type="text" class="form-control" id="cupomNome" ng-model="$ctrl.couponName"
-                                placeholder="EXEMPLO20" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label><strong>Tipo de Cupom:</strong></label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="cupomUnico" ng-model="$ctrl.couponType"
-                                    value="unico">
-                                <label class="form-check-label" for="cupomUnico">Único</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="cupomGeral" ng-model="$ctrl.couponType"
-                                    value="geral">
-                                <label class="form-check-label" for="cupomGeral">Geral</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label><strong>Tipo de Desconto:</strong></label>
-                            <div class="form-check ">
-                                <input class="form-check-input" type="radio" id="descontoPorcentagem"
-                                    ng-model="$ctrl.discountType" value="porcentagem">
-                                <label class="form-check-label" for="descontoPorcentagem">Porcentagem</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="descontoValorFixo"
-                                    ng-model="$ctrl.discountType" value="valor_fixo">
-                                <label class="form-check-label" for="descontoValorFixo">Valor Fixo</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="valorMinimo"><strong>Valor Mínimo:</strong></label>
-                            <input type="number" class="form-control" id="valorMinimo" ng-model="$ctrl.minValue"
-                                placeholder="Digite o valor mínimo de compra">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="valorDesconto"><strong>Valor de Desconto:</strong></label>
-                            <input type="text" class="form-control" id="valorDesconto" ng-model="$ctrl.discountValue"
-                                placeholder="20%" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="dataValidade"><strong>Data de Validade:</strong></label>
-                            <input type="date" class="form-control" id="dataValidade" ng-model="$ctrl.expiryDate"
-                                required>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addCoupon()">Cadastrar
-                            Cupom</button>
-                    </form>
-                </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="cupomNome"><strong>Nome do Cupom:</strong></label>
+              <input type="text" class="form-control" id="cupomNome" ng-model="$ctrl.couponName" placeholder="EXEMPLO20"
+                required>
             </div>
-        </div>
 
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body" style="max-height: 614px; overflow-y: auto;">
-                    <h5 class="card-title">Cupons Cadastrados</h5>
-                    <ul class="list-unstyled">
-                        <li ng-repeat="(index, coupon) in $ctrl.cupons" class="mb-3 border p-3">
-                            <button class="btn btn-sm btn-danger float-right"
-                                ng-click="$ctrl.deleteCoupon(index)">Excluir</button>
-                            <div>
-                                <p><strong>Nome:</strong> {{ coupon.name }}</p>
-                                <p ng-if="coupon.couponType"><strong>Tipo de Cupom:</strong> {{ coupon.couponType }}</p>
-                                <p ng-if="coupon.discountType"><strong>Tipo de Desconto:</strong> {{ coupon.discountType
-                                    }}</p>
-                                <p ng-if="coupon.minValue"><strong>Valor Mínimo:</strong> {{ coupon.minValue }}</p>
-                                <p><strong>Desconto:</strong> {{ coupon.discount }}</p>
-                                <p><strong>Data de Validade:</strong> {{ coupon.expiryDate | date:'dd/MM/yyyy' }}</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            <div class="form-group">
+              <label><strong>Tipo de Cupom:</strong></label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="cupomUnico" ng-model="$ctrl.couponType" value="unico">
+                <label class="form-check-label" for="cupomUnico">Único</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="cupomGeral" ng-model="$ctrl.couponType" value="geral">
+                <label class="form-check-label" for="cupomGeral">Geral</label>
+              </div>
             </div>
+
+            <div class="form-group">
+              <label><strong>Tipo de Desconto:</strong></label>
+              <div class="form-check ">
+                <input class="form-check-input" type="radio" id="descontoPorcentagem" ng-model="$ctrl.discountType"
+                  value="porcentagem">
+                <label class="form-check-label" for="descontoPorcentagem">Porcentagem</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="descontoValorFixo" ng-model="$ctrl.discountType"
+                  value="valor_fixo">
+                <label class="form-check-label" for="descontoValorFixo">Valor Fixo</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="valorMinimo"><strong>Valor Mínimo:</strong></label>
+              <input type="number" class="form-control" id="valorMinimo" ng-model="$ctrl.minValue"
+                placeholder="Digite o valor mínimo de compra">
+            </div>
+
+            <div class="form-group">
+              <label for="valorDesconto"><strong>Valor de Desconto:</strong></label>
+              <input type="text" class="form-control" id="valorDesconto" ng-model="$ctrl.discountValue"
+                placeholder="20%" required>
+            </div>
+
+            <div class="form-group">
+              <label for="dataValidade"><strong>Data de Validade:</strong></label>
+              <input type="date" class="form-control" id="dataValidade" ng-model="$ctrl.expiryDate" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" ng-click="$ctrl.addCoupon()">Cadastrar
+              Cupom</button>
+          </form>
         </div>
+      </div>
     </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body" style="max-height: 614px; overflow-y: auto;">
+          <h5 class="card-title">Cupons Cadastrados</h5>
+          <ul class="list-unstyled">
+            <li ng-repeat="(index, coupon) in $ctrl.cupons" class="mb-3 border p-3">
+              <button class="btn btn-sm btn-danger float-right" ng-click="$ctrl.deleteCoupon(index)">Excluir</button>
+              <div>
+                <p><strong>Nome:</strong> {{ coupon.name }}</p>
+                <p ng-if="coupon.couponType"><strong>Tipo de Cupom:</strong> {{ coupon.couponType }}</p>
+                <p ng-if="coupon.discountType"><strong>Tipo de Desconto:</strong> {{ coupon.discountType
+                  }}</p>
+                <p ng-if="coupon.minValue"><strong>Valor Mínimo:</strong> {{ coupon.minValue }}</p>
+                <p><strong>Desconto:</strong> {{ coupon.discount }}</p>
+                <p><strong>Data de Validade:</strong> {{ coupon.expiryDate | date:'dd/MM/yyyy' }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
