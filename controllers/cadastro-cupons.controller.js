@@ -85,14 +85,13 @@ angular.module("cupomApp").controller("CadastroCuponsController", function () {
         backgroundColor: "rgba(75, 192, 192, 0.9)",
         borderColor: "rgba(75, 192, 192, 1)",
         borderWidth: 1,
-        data: [12, 19, 78, 50, 24, 32, 50, 24, 32],
+        data: [12, 19, 40, 42, 24, 32, 38, 24, 32],
         barThickness: 30,
       },
     ],
   }
   this.chartOptions = {
     responsive: true,
-    maintainAspectRatio: true,
     scales: {
       y: {
         beginAtZero: true,
